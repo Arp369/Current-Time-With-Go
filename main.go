@@ -65,6 +65,7 @@ func currentTimeHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+
 	// Initialize the database connection
 	initDB()
 	defer db.Close()
@@ -74,5 +75,5 @@ func main() {
 
 	// Start the server on port 8080
 	fmt.Println("Server is running on port 8080...")
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	log.Fatal(http.ListenAndServe(":80", nil))
 }

@@ -1,6 +1,6 @@
 # Current-Time-With-Go 
 
-### This project is a simple API built using Go that provides the current time in Toronto, stores it in a MySQL database, and returns it as a JSON response. The application also logs the current time each time the endpoint is accessed.
+#### This project is a simple API built using Go that provides the current time in Toronto, stores it in a MySQL database, and returns it as a JSON response. The application also logs the current time each time the endpoint is accessed.
 
 ## Features:
 - Provides current time in Toronto in YYYY-MM-DD HH:MM:SS format.

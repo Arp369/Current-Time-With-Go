@@ -22,6 +22,7 @@ var db *sql.DB
 // Initialize MySQL database connection
 func initDB() {
 	var err error
+	// Replace "user:password@tcp(localhost:3306)/time_api" with your actual MySQL credentials
 	dsn := "root:1234@tcp(localhost:3306)/time_api"
 	db, err = sql.Open("mysql", dsn)
 	if err != nil {
@@ -65,7 +66,6 @@ func currentTimeHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-
 	// Initialize the database connection
 	initDB()
 	defer db.Close()
@@ -75,5 +75,5 @@ func main() {
 
 	// Start the server on port 8080
 	fmt.Println("Server is running on port 8080...")
-	log.Fatal(http.ListenAndServe(":80", nil))
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }
